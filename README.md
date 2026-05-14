@@ -1,3 +1,3 @@
-suryakant-techsavy.github.io
+##aishwarya-studio.github.io
 Portfolio Site
-This is a resume template website created for Aishwarya
+This is a resume template website created for Aishwarya.

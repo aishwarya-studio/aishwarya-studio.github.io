@@ -21,7 +21,7 @@
 
     header {
       background: white;
-      padding: 20px 60px;
+      padding: 10px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -31,10 +31,7 @@
       z-index: 1000;
     }
 
-    header h1 {
-      color: #d35400;
-      font-size: 28px;
-    }
+   
 
     nav a {
       text-decoration: none;
@@ -145,6 +142,7 @@
       width: 100%;
       height: 250px;
       object-fit: cover;
+	  transition: opacity 1s ease;
     }
 
     .gallery-card h3 {
@@ -215,6 +213,17 @@
       margin-bottom: 15px;
       color: #d35400;
     }
+	
+	.contact-card a {
+  text-decoration: none;
+  
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-card a:hover {
+  color: #a84300;
+}
 
     footer {
       background: #d35400;
@@ -244,6 +253,48 @@
         padding: 60px 20px;
       }
     }
+	.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#Brand-img {
+  height: 70px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+#Brand-img:hover {
+  transform: scale(1.08);
+}
+
+header h1 {
+  color: #d35400;
+  font-size: 24px;
+}
+.contact-card a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.contact-card a:hover {
+  color: #333;
+}
+.gallery-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+#rangoli-slider {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
   </style>
 </head>
 
@@ -251,22 +302,30 @@
 
 
   <header>
-    <h1>Kalakruti By Aishwarya</h1>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="logo-container">
+    <img src="Kalakruti By Aishwarya.jpeg" 
+         alt="Brand_img" 
+         id="Brand-img">
+
+    <h1>Kalakruti By Aishwarya</h1>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
 
   <section class="hero" id="home">
     <h2>Bringing Indian Tradition to Life Through Art & Creativity</h2>
 
     <p>
-      Rangoli • Mehendi • Drawing & Painting Artwork • Handmade Crafts
+      Rangoli • Mehendi • Drawing & Painting Artwork • Decorations
     </p>
 
     <p>
@@ -282,27 +341,27 @@
 
     <div class="about-container">
       <img
-        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop"
+        src="Aish_img1.JPG"
         alt="Artist"
       />
 
       <div class="about-text">
         <p>
           She is a passionate traditional artist specializing in Rangoli design,
-          Mehendi art, drawing & Painting and handmade crafts.
+          Mehendi art, Drawing & Painting and Decoration for special moments.
         </p>
 
         <br>
 
         <p>
-          My artistic journey started through festivals, weddings and family
-          celebrations where I discovered my love for Indian traditional art.
+          Her artistic journey started through festivals, weddings and family
+          celebrations where she discovered her love for Indian traditional art.
         </p>
 
         <br>
 
         <p>
-          My mission is to preserve traditional Indian art forms while blending
+          Her mission is to preserve traditional Indian art forms while blending
           them with modern elegance and creativity.
         </p>
       </div>
@@ -312,39 +371,29 @@
   <section id="portfolio">
     <h2 class="section-title">Portfolio Gallery</h2>
 
-    <div class="gallery">
-      <div class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=1200&auto=format&fit=crop"
-          alt="Rangoli"
-        />
-        <h3>Rangoli</h3>
-      </div>
+   <div class="gallery">
 
-      <div class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop"
-          alt="Mehendi"
-        />
-        <h3>Mehendi</h3>
-      </div>
+  <div class="gallery-card">
+    <img id="rangoli-slider" src="Media/Img/Rangoli/1.jpeg" alt="Rangoli">
+    <h3>Rangoli</h3>
+  </div>
 
-      <div class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1200&auto=format&fit=crop"
-          alt="Art"
-        />
-        <h3>Artwork</h3>
-      </div>
+  <div class="gallery-card">
+    <img id="mehendi-slider" src="Media/Img/Mehndi/1.jpeg" alt="Mehndi">
+    <h3>Mehendi</h3>
+  </div>
 
-      <div class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-          alt="Craft"
-        />
-        <h3>Handmade Crafts</h3>
-      </div>
-    </div>
+  <div class="gallery-card">
+    <img id="drawing-slider" src="Media/Img/Drawing/1.jpeg" alt="Drawing">
+    <h3>Drawing & Painting</h3>
+  </div>
+
+  <div class="gallery-card">
+    <img id="decorations-slider" src="Media/Img/Decorations/1.jpeg" alt="Decorations">
+    <h3>Decorations</h3>
+  </div>
+
+</div>
   </section>
 
   <section id="services">
@@ -352,20 +401,20 @@
 
     <div class="services">
       <div class="service-box">
-        <h3>Mehendi Designer</h3>
+        <h3>Mehendi</h3>
       </div>
 
       <div class="service-box">
-        <h3>Festival Rangoli Artist</h3>
+        <h3>Rangoli</h3>
       </div>
 
 
       <div class="service-box">
-        <h3>Customized Handmade Gifts</h3>
+        <h3>Drawing and Painting Artwork</h3>
       </div>
 
       <div class="service-box">
-        <h3>Creative Event Decorations</h3>
+        <h3>Creative Decorations</h3>
       </div>
     </div>
   </section>
@@ -390,7 +439,7 @@
 
       <div class="testimonial">
         <p>
-          “Amazing handmade decorations that added beauty to our family event.”
+          “Amazing decorations that added beauty to our family event.”
         </p>
         <h4>- Aman K.</h4>
       </div>
@@ -398,23 +447,29 @@
   </section>
 
   <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
+            
+    <h2 class="section-title">Let’s Create Something Beautiful Together</h2>
+	<center><p className="text-gray-700 mb-10 leading-relaxed">
+            Whether you are looking for mehendi, rangoli,
+           Drawings and Painting Artwork or customized creative artistic Decorations, I would love to
+            connect with you.
+          </p></center><br>
 
     <div class="contact-box">
       <div class="contact-card">
         <h3>Location</h3>
-        <p>Bengaluru, Karnataka, India</p>
+        <p>&#127968; Bengaluru, Karnataka, India</p>
       </div>
 
       <div class="contact-card">
         <h3>Contact</h3>
-        <p>+91 90042 87740</p>
-        <p>aishugunjurge@gmail.com</p>
+        <p> &#128241; +91 90042 87740</p>
+        <p> 📧 aishugunjurge@gmail.com</p>
       </div>
 
       <div class="contact-card">
         <h3>Social Media</h3>
-        <p>LinkedIn: https://www.linkedin.com/in/aishu-gunjurge-83484b409</p>
+        <p><a href="https://www.linkedin.com/in/aishwarya-gunjurge-83484b409" target="_blank">&#128279;LinkedIn</a> </p>
       </div>
     </div>
   </section>
@@ -430,23 +485,58 @@
       © 2026 Kalakruti By Aishwarya. All Rights Reserved.
     </p>
   </footer>
+<script src="js/rangoli-images.js"></script>
 
-  <script>
-    const navLinks = document.querySelectorAll('nav a');
+<script>
+const navLinks = document.querySelectorAll('nav a');
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
 
-        targetSection.scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+    targetSection.scrollIntoView({
+      behavior: 'smooth'
     });
-  </script>
+  });
+});
+
+function startSlider(elementId, images, interval = 3000){
+
+    let index = 0;
+
+    const img = document.getElementById(elementId);
+
+    if(!img || images.length === 0){
+        return;
+    }
+
+    setInterval(() => {
+
+        img.style.opacity = "0";
+
+        setTimeout(() => {
+
+            index = (index + 1) % images.length;
+
+            img.src = images[index];
+
+            img.style.opacity = "1";
+
+        }, 500);
+
+    }, interval);
+}
+
+startSlider("rangoli-slider", rangoliImages, 3000);
+startSlider("mehendi-slider", mehendiImages, 3500);
+startSlider("drawing-slider", drawingImages, 4000);
+startSlider("decorations-slider", decorationImages, 4500);
+
+</script>
+
 
 </body>
 </html>
